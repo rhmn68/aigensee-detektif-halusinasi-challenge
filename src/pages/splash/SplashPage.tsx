@@ -1,0 +1,73 @@
+import React from 'react';
+import bgSplash from '../../assets/background.webp';
+import judulAtas from '../../assets/judul atas baru@2x.webp';
+import judulBawah from '../../assets/judul bawah baru@2x.webp';
+import tombolMulai from '../../assets/tombol mulai.webp';
+import logoJenama from '../../assets/logo-jenama.webp?v2';
+
+interface SplashPageProps {
+  onStart: () => void;
+}
+
+export function SplashPage({ onStart }: SplashPageProps) {
+  return (
+    <div id="splash-page" className="relative w-screen h-screen min-h-screen overflow-hidden flex items-center justify-end select-none bg-[#021324] animate-fadeIn p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12 2xl:p-16">
+      {/* Background Graphic Asset */}
+      <img
+        id="splash-bg-image"
+        src={bgSplash}
+        alt="Background Detektif Halusinasi"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none z-0"
+      />
+
+      {/* Pusbuk Logo on Absolute Top Left */}
+      <div id="splash-logo-container" className="absolute top-3 left-3 sm:top-5 sm:left-5 z-40 shrink-0 animate-fadeIn">
+        <img
+          id="splash-logo-pusbuk"
+          src={logoJenama}
+          alt="Logo Pusbuk"
+          className="h-7 sm:h-10 md:h-14 lg:h-16 2xl:h-28 w-auto object-contain drop-shadow-[0_8px_16px_rgba(56,69,91,0.55)]"
+        />
+      </div>
+
+      {/* Right Side Content Container */}
+      <div id="splash-content-container" className="relative z-10 flex flex-col items-center text-center w-full max-w-[240px] xs:max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl mr-2 sm:mr-3 md:mr-6 lg:mr-8 xl:mr-12 2xl:mr-18">
+        {/* Judul Atas Asset (Animasi Mengambang) */}
+        <div id="splash-title-top-container" className="w-full max-w-[200px] xs:max-w-[240px] sm:max-w-[290px] md:max-w-[350px] lg:max-w-[420px] xl:max-w-[490px] 2xl:max-w-[700px] mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-4 2xl:mb-5 transition-all duration-300 animate-float-slow">
+          <img
+            id="splash-title-top-img"
+            src={judulAtas}
+            alt="Detektif Halusinasi"
+            className="w-full h-auto object-contain mx-auto drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
+          />
+        </div>
+
+        {/* Judul Bawah Asset (Animasi Mengambang dengan Offset Delay) */}
+        <div id="splash-title-bottom-container" className="w-full max-w-[230px] xs:max-w-[280px] sm:max-w-[360px] md:max-w-[440px] lg:max-w-[530px] xl:max-w-[620px] 2xl:max-w-[880px] mb-4 sm:mb-6 md:mb-8 lg:mb-12 xl:mb-16 2xl:mb-36 transition-all duration-300 animate-float-delay">
+          <img
+            id="splash-title-bottom-img"
+            src={judulBawah}
+            alt="Kecerdasan Artifisial: Anomali & Hoaks"
+            className="w-full h-auto object-contain mx-auto drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
+          />
+        </div>
+
+        {/* Start Button Asset (Animasi Pulsing / Glow) */}
+        <button
+          id="btn-start-game"
+          type="button"
+          onClick={onStart}
+          aria-label="Mulai Investigasi"
+          className="group relative cursor-pointer focus:outline-none transition-all duration-300 hover:scale-110 active:scale-95 animate-button-pulse"
+        >
+          <img
+            id="splash-btn-start-img"
+            src={tombolMulai}
+            alt="Mulai"
+            className="w-[140px] xs:w-[170px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[290px] 2xl:w-[380px] h-auto object-contain select-none pointer-events-none"
+          />
+        </button>
+      </div>
+    </div>
+  );
+}
