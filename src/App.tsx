@@ -6,7 +6,8 @@ import { ArenaPage } from './pages/arena/ArenaPage';
 import { ResultPage } from './pages/result/ResultPage';
 import { PortraitWarning } from './components/PortraitWarning';
 import { ObjectivesModal } from './components/ObjectivesModal';
-import { toggleMute, getIsMuted, startBGM } from './utils/audio';
+import { TutorialModal } from './components/TutorialModal';
+import { toggleMute, getIsMuted, startBGM, stopBGM } from './utils/audio';
 
 export default function App() {
   const {
@@ -39,6 +40,7 @@ export default function App() {
     return isFullscreenSupported && !isCurrentlyFullscreen;
   });
   const [showObjectivesModal, setShowObjectivesModal] = useState(false);
+  const [showTutorial, setShowTutorial] = useState(false);
   const [isOpenedFromSplash, setIsOpenedFromSplash] = useState(false);
   const [isMutedState, setIsMutedState] = useState(getIsMuted());
 
@@ -56,8 +58,15 @@ export default function App() {
     setShowObjectivesModal(false);
     if (isOpenedFromSplash) {
       setIsOpenedFromSplash(false);
-      startInvestigation();
+      stopBGM();
+      setShowTutorial(true);
     }
+  };
+
+  const handleProceedFromTutorial = () => {
+    setShowTutorial(false);
+    startBGM();
+    startInvestigation();
   };
 
   const enterFullscreen = async () => {
@@ -74,9 +83,10 @@ export default function App() {
   const handleToggleSound = () => {
     const newMuted = toggleMute();
     setIsMutedState(newMuted);
-    if (!newMuted) {
+    if (!newMuted && !showTutorial) {
       startBGM();
     }
+    if (showTutorial) stopBGM();
   };
 
   return (
@@ -148,6 +158,7 @@ export default function App() {
         onClose={handleCloseObjectives}
         onStart={isOpenedFromSplash ? handleProceedFromObjectives : undefined}
       />
+      {showTutorial && <TutorialModal onContinue={handleProceedFromTutorial} />}
 
       {/* Pages Router */}
       {pageView === 'splash' && (
