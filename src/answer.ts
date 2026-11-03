@@ -2,8 +2,8 @@
  * Detektif Halusinasi Challenge - Kunci Jawaban Lengkap (Level 1 - 10)
  * Menemukan Anomali Gambar & Halusinasi Teks / Fakta Buatan AI
  * 
- * 🌐 Live URL Demo: https://glenrioariesto.github.io/detektif-halusinasi-challenge/
- * 📂 Repository: https://github.com/glenrioariesto/detektif-halusinasi-challenge
+ * Live URL Demo: https://glenrioariesto.github.io/detektif-halusinasi-challenge/
+ * Repository: https://github.com/glenrioariesto/detektif-halusinasi-challenge
  */
 
 export interface ImageAnomalyAnswer {

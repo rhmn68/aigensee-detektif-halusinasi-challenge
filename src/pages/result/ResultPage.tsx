@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, RotateCcw, Check, BookOpen, ImageIcon, FileText, X } from 'lucide-react';
+import { Award, RotateCcw, Check, BookOpen, ImageIcon, FileText, X, Sparkles, TriangleAlert } from 'lucide-react';
 import { UserLevelAnswer, Level } from '../../types';
 import logoJenama from '../../assets/logo-jenama.webp?v2';
 
@@ -74,8 +74,12 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
                 </span>
               </div>
             </div>
-            <span className="text-[8px] sm:text-[9px] font-mono text-[#8fabc6] mt-2">
-              {misses === 0 ? '✨ Sempurna (0 Meleset)' : `⚠️ ${misses}x Salah Klik`}
+            <span className="text-[8px] sm:text-[9px] font-mono text-[#8fabc6] mt-2 inline-flex items-center gap-1">
+              {misses === 0 ? (
+                <><Sparkles aria-hidden="true" className="w-3 h-3 shrink-0" /> Sempurna (0 Meleset)</>
+              ) : (
+                <><TriangleAlert aria-hidden="true" className="w-3 h-3 shrink-0" /> {misses}x Salah Klik</>
+              )}
             </span>
           </div>
 

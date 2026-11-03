@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle2, ArrowRight, X, BookOpen, Target, ImageIcon, FileText, Award, ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { CheckCircle2, ArrowRight, X, BookOpen, Target, ImageIcon, FileText, Award, ChevronLeft, ChevronRight, Check, Lightbulb } from 'lucide-react';
 import type { Level, MissClick, UserLevelAnswer } from '../../types';
 import { CAMPAIGN_LEVELS } from '../../data/questions';
 import { InteractiveImage } from '../../components/InteractiveImage';
@@ -312,7 +312,7 @@ export function ArenaPage({
                 </div>
                 
                 <div className="text-[9px] sm:text-[10px] text-[#8fabc6] border-t border-[#0f3b66] pt-2.5 mt-2 text-right uppercase shrink-0 font-title tracking-wide flex items-center justify-between">
-                  <span className="text-[#388ce0]">💡 Arahkan & klik kalimat yang memuat anomali</span>
+                  <span className="inline-flex items-center gap-1 text-[#388ce0]"><Lightbulb aria-hidden="true" className="w-3 h-3 shrink-0" /> Arahkan & klik kalimat yang memuat anomali</span>
                   <span>Pemeriksaan Dokumen</span>
                 </div>
               </div>
