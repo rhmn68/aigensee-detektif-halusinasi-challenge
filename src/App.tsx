@@ -199,7 +199,7 @@ export default function App() {
           pageView === 'splash' ? 'text-black' : 'text-white'
         }`}
       >
-        Copyright 2026 Pusat Perbukuan
+        © Copyright 2026 Pusat Perbukuan
       </footer>
     </div>
   );
