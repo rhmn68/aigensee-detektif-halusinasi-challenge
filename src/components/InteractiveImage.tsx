@@ -133,7 +133,7 @@ export function InteractiveImage({
     >
       {/* Zoom indicator tag */}
       {!found && !disabled && (
-        <div id="interactive-image-scan-indicator" className="absolute top-4 right-4 z-10 bg-[#041a32]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#1f568d]/60 text-[#8fabc6] text-[10px] sm:text-xs font-title tracking-wider flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity shadow-none select-none uppercase">
+        <div id="interactive-image-scan-indicator" className="absolute top-4 right-4 z-10 bg-[#041a32]/85 backdrop-blur-md px-3 py-1 rounded-full border border-[#1f568d]/60 text-[#8fabc6] text-[10px] sm:text-xs font-title tracking-wider flex items-center gap-1.5 opacity-80 hover:opacity-100 transition-opacity shadow-none select-none ">
           <ZoomIn className="w-3.5 h-3.5 text-[#388ce0]" />
           <span>Arahkan untuk Scan</span>
         </div>

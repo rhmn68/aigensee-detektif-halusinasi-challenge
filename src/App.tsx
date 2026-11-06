@@ -114,7 +114,7 @@ export default function App() {
       {showFullscreenPrompt && (
         <div id="modal-fullscreen-prompt" className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 select-none animate-fadeIn">
           <div id="card-fullscreen-prompt" className="relative max-w-sm w-full mx-auto bg-[#041a32] border-2 border-[#1f568d] shadow-none rounded-3xl p-6 sm:p-8 flex flex-col items-center text-center">
-            <h3 className="text-xl sm:text-2xl font-normal text-white tracking-wide mb-2 uppercase font-title">
+            <h3 className="text-xl sm:text-2xl font-normal text-white tracking-wide mb-2 font-title">
               Mode Layar Penuh
             </h3>
             

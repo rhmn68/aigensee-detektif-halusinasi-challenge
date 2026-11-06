@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, RotateCcw, Check, BookOpen, ImageIcon, FileText, X, Sparkles, TriangleAlert } from 'lucide-react';
+import { Award, RotateCcw, Check, BookOpen, ImageIcon, FileText, X, TriangleAlert } from 'lucide-react';
 import { UserLevelAnswer, Level } from '../../types';
 import logoJenama from '../../assets/logo-jenama.webp?v2';
 
@@ -47,7 +47,7 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
 
       <div className="z-10 max-w-3xl w-full flex flex-col items-center select-none animate-fadeIn">
         {/* Headings */}
-        <h2 id="result-page-title" className="text-xl sm:text-2xl md:text-3xl font-normal font-title mb-3 sm:mb-4 text-center uppercase tracking-wide text-white shrink-0">
+        <h2 id="result-page-title" className="text-xl sm:text-2xl md:text-3xl font-normal font-title mb-3 sm:mb-4 text-center tracking-wide text-white shrink-0">
           Evaluasi Laporan Investigasi
         </h2>
 
@@ -55,7 +55,7 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
         <div id="result-dashboard-grid" className="grid grid-cols-2 gap-3 sm:gap-4 w-full mb-4 sm:mb-6 shrink-0">
           {/* Circular Score Gauge */}
           <div id="card-result-accuracy" className="bg-[#041a32]/90 border-2 border-[#1f568d]/60 rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-center text-center backdrop-blur-md shadow-xl">
-            <span className="text-[8px] sm:text-[9px] font-mono font-bold text-[#8fabc6] uppercase tracking-widest mb-2 sm:mb-3">
+            <span className="text-[8px] sm:text-[9px] font-mono font-bold text-[#8fabc6] tracking-widest mb-2 sm:mb-3">
               Indeks Akurasi Penyelidikan
             </span>
             <div id="gauge-accuracy-circle" className="relative w-20 h-20 sm:w-28 sm:h-28 flex items-center justify-center">
@@ -69,14 +69,14 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
               ></div>
               <div className="flex flex-col items-center">
                 <span className="text-xl sm:text-2xl font-black font-mono text-[#f0c400]">{accuracy}%</span>
-                <span className="text-[7px] sm:text-[8px] font-mono text-[#8fabc6] uppercase font-bold mt-0.5 sm:mt-1">
+                <span className="text-[7px] sm:text-[8px] font-mono text-[#8fabc6] font-bold mt-0.5 sm:mt-1">
                   {score}/{levels.length} Kasus Selesai
                 </span>
               </div>
             </div>
             <span className="text-[8px] sm:text-[9px] font-mono text-[#8fabc6] mt-2 inline-flex items-center gap-1">
               {misses === 0 ? (
-                <><Sparkles aria-hidden="true" className="w-3 h-3 shrink-0" /> Sempurna (0 Meleset)</>
+                'Sempurna (0 Meleset)'
               ) : (
                 <><TriangleAlert aria-hidden="true" className="w-3 h-3 shrink-0" /> {misses}x Salah Klik</>
               )}
@@ -85,7 +85,7 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
 
           {/* Rank Badge description */}
           <div id="card-result-rank" className="bg-[#041a32]/90 border-2 border-[#1f568d]/60 rounded-2xl p-3 sm:p-4 flex flex-col justify-center backdrop-blur-md relative overflow-hidden shadow-xl">
-            <span className="text-[8px] sm:text-[9px] font-mono font-bold text-[#8fabc6] uppercase tracking-widest mb-1">
+            <span className="text-[8px] sm:text-[9px] font-mono font-bold text-[#8fabc6] tracking-widest mb-1">
               Pangkat Kredibilitas
             </span>
             
@@ -154,7 +154,7 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
 
               <div className="flex items-center gap-2 border-b border-[#0f3b66] pb-2 mb-4 shrink-0">
                 <BookOpen className="w-4 h-4 text-[#f0c400]" />
-                <h3 className="font-title text-sm font-normal text-[#f0c400] uppercase tracking-wider">
+                <h3 className="font-title text-sm font-normal text-[#f0c400] tracking-wider">
                   Rekapitulasi Temuan Halusinasi
                 </h3>
               </div>
@@ -163,12 +163,12 @@ export function ResultPage({ score, totalMisses, answers, onRestart, getRank, le
                 <table id="table-case-log" className="w-full text-left font-mono text-[11px] sm:text-xs text-[#c8d5e3]">
                   <thead>
                     <tr className="border-b border-[#0f3b66] text-[#8fabc6] pb-2">
-                      <th className="pb-2 font-bold uppercase tracking-wider w-12 text-center">Kasus</th>
-                      <th className="pb-2 font-bold uppercase tracking-wider">Topik/Kategori</th>
-                      <th className="pb-2 font-bold uppercase tracking-wider text-center w-24">Tipe Mode</th>
-                      <th className="pb-2 font-bold uppercase tracking-wider text-center w-24">Target</th>
-                      <th className="pb-2 font-bold uppercase tracking-wider text-center w-28">Percobaan</th>
-                      <th className="pb-2 font-bold uppercase tracking-wider text-center w-24">Status</th>
+                      <th className="pb-2 font-bold tracking-wider w-12 text-center">Kasus</th>
+                      <th className="pb-2 font-bold tracking-wider">Topik/Kategori</th>
+                      <th className="pb-2 font-bold tracking-wider text-center w-24">Tipe Mode</th>
+                      <th className="pb-2 font-bold tracking-wider text-center w-24">Target</th>
+                      <th className="pb-2 font-bold tracking-wider text-center w-28">Percobaan</th>
+                      <th className="pb-2 font-bold tracking-wider text-center w-24">Status</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#0f3b66]/60">

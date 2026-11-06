@@ -156,7 +156,7 @@ export const CAMPAIGN_LEVELS: Level[] = [
         "radiusY": 6,
         "borderRadius": 20,
         "rotation": 317,
-        "label": "Anomali Dahi / Alis"
+        "label": "Anomali Dahi/Alis"
       },
       {
         "x": 75,

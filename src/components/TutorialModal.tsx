@@ -22,7 +22,7 @@ export function TutorialModal({ onContinue }: TutorialModalProps) {
       >
         <div className="flex items-center gap-3 mb-3">
           <PlayCircle className="w-7 h-7 shrink-0 text-[#f0c400]" />
-          <h2 ref={headingRef} tabIndex={-1} id="tutorial-title" className="font-title text-lg sm:text-xl text-[#f0c400] uppercase tracking-wide outline-none">
+          <h2 ref={headingRef} tabIndex={-1} id="tutorial-title" className="font-title text-lg sm:text-xl text-[#f0c400] tracking-wide outline-none">
             Video Tutorial Investigasi
           </h2>
         </div>
@@ -43,7 +43,7 @@ export function TutorialModal({ onContinue }: TutorialModalProps) {
           <a href="https://youtu.be/V2aN2Zk3t7s" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm text-[#8fabc6] hover:text-white underline underline-offset-4">
             Buka di YouTube
           </a>
-          <button type="button" onClick={onContinue} className="flex items-center gap-2 rounded-xl bg-[#f0c400] hover:bg-[#ffd21a] px-4 py-2.5 font-title text-xs sm:text-sm text-black uppercase tracking-wide cursor-pointer active:scale-95 transition-all">
+          <button type="button" onClick={onContinue} className="flex items-center gap-2 rounded-xl bg-[#f0c400] hover:bg-[#ffd21a] px-4 py-2.5 font-title text-xs sm:text-sm text-black tracking-wide cursor-pointer active:scale-95 transition-all">
             Lanjut ke Investigasi
             <ArrowRight className="w-4 h-4" />
           </button>

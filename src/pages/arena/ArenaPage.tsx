@@ -111,7 +111,7 @@ export function ArenaPage({
             />
             <span
               id="badge-level-judul-text"
-              className="absolute inset-0 flex items-center justify-center font-title text-[#f0c400] text-[9px] sm:text-xs md:text-sm lg:text-base xl:text-2xl 2xl:text-3xl tracking-wider uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] pb-0.5 px-3"
+              className="absolute inset-0 flex items-center justify-center font-title text-[#f0c400] text-[9px] sm:text-xs md:text-sm lg:text-base xl:text-2xl 2xl:text-3xl tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] pb-0.5 px-3"
             >
               Kasus {currentLevelIndex + 1}
             </span>
@@ -168,7 +168,7 @@ export function ArenaPage({
               id="badge-anomaly-count"
               className="px-3 py-1.5 bg-[#041a32]/90 backdrop-blur-md border-2 border-[#1f568d]/60 rounded-xl text-xs sm:text-sm text-[#f0c400] font-title tracking-wider shadow-none flex items-center"
             >
-              <span>{(foundHotspotIndices || []).length} / {currentHotspots.length} Anomali</span>
+              <span>{(foundHotspotIndices || []).length}/{currentHotspots.length} Anomali</span>
             </div>
           </div>
         )}
@@ -261,7 +261,7 @@ export function ArenaPage({
               <div id="arena-text-case-card" className="w-full max-w-2xl lg:max-w-3xl 2xl:max-w-4xl bg-[#041a32]/95 border-2 border-[#1f568d]/60 rounded-2xl p-4 sm:p-6 md:p-7 text-xs sm:text-sm md:text-base leading-relaxed shadow-none relative flex flex-col justify-between max-h-[72vh] sm:max-h-[78vh] 2xl:max-h-[80vh] overflow-hidden min-w-0">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1f568d] via-[#388ce0] to-[#f0c400]"></div>
                 
-                <div className="text-[10px] sm:text-xs text-[#8fabc6] border-b border-[#0f3b66] pb-2.5 mb-3 uppercase tracking-wider flex items-center justify-between shrink-0 font-title">
+                <div className="text-[10px] sm:text-xs text-[#8fabc6] border-b border-[#0f3b66] pb-2.5 mb-3 tracking-wider flex items-center justify-between shrink-0 font-title">
                   <span>Bukti Dokumen #DOC-{activeLevel.id}</span>
                   <span className="px-2.5 py-0.5 bg-[#0a2f54]/70 border border-[#1f568d]/50 text-[#8fabc6] rounded font-title">
                     {activeLevel.category}
@@ -311,7 +311,7 @@ export function ArenaPage({
                   </p>
                 </div>
                 
-                <div className="text-[9px] sm:text-[10px] text-[#8fabc6] border-t border-[#0f3b66] pt-2.5 mt-2 text-right uppercase shrink-0 font-title tracking-wide flex items-center justify-between">
+                <div className="text-[9px] sm:text-[10px] text-[#8fabc6] border-t border-[#0f3b66] pt-2.5 mt-2 text-right shrink-0 font-title tracking-wide flex items-center justify-between">
                   <span className="inline-flex items-center gap-1 text-[#388ce0]"><Lightbulb aria-hidden="true" className="w-3 h-3 shrink-0" /> Arahkan & klik kalimat yang memuat anomali</span>
                   <span>Pemeriksaan Dokumen</span>
                 </div>
@@ -354,7 +354,7 @@ export function ArenaPage({
               <div className="flex items-center justify-between border-b border-[#0f3b66] pb-2.5 mb-3 shrink-0 pr-8">
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-4 h-4 text-[#f0c400]" />
-                  <h3 className="text-xs sm:text-sm font-normal text-[#f0c400] uppercase tracking-wider font-title">
+                  <h3 className="text-xs sm:text-sm font-normal text-[#f0c400] tracking-wider font-title">
                     Panduan Cara Bermain
                   </h3>
                 </div>
@@ -369,7 +369,7 @@ export function ArenaPage({
                   <div className="bg-[#062444]/60 border border-[#1f568d]/50 rounded-xl p-3 sm:p-3.5 space-y-2 animate-fadeIn">
                     <div className="flex items-center gap-2">
                       <Target className="w-4 h-4 text-[#388ce0]" />
-                      <span className="font-title text-[#388ce0] uppercase tracking-wide text-xs sm:text-sm">1. Misi Utama Penyelidik</span>
+                      <span className="font-title text-[#388ce0] tracking-wide text-xs sm:text-sm">1. Misi Utama Penyelidik</span>
                     </div>
                     <p className="text-[#c8d5e3] text-xs sm:text-sm leading-relaxed">
                       Bongkar kejanggalan dan halusinasi buatan <strong>Kecerdasan Artifisial (KA)</strong> di 10 kasus digital (5 Kasus Gambar & 5 Kasus Dokumen Teks).
@@ -385,7 +385,7 @@ export function ArenaPage({
                   <div className="bg-[#062444]/60 border border-[#1f568d]/50 rounded-xl p-3 sm:p-3.5 space-y-2 animate-fadeIn">
                     <div className="flex items-center gap-2">
                       <ImageIcon className="w-4 h-4 text-[#f0c400]" />
-                      <span className="font-title text-[#f0c400] uppercase tracking-wide text-xs sm:text-sm">2. Investigasi Citra (Gambar)</span>
+                      <span className="font-title text-[#f0c400] tracking-wide text-xs sm:text-sm">2. Investigasi Citra (Gambar)</span>
                     </div>
                     <ul className="text-[#c8d5e3] text-xs sm:text-sm space-y-1 list-disc list-inside">
                       <li>Arahkan kursor atau sentuh layar untuk menggunakan <strong>kaca pembesar</strong>.</li>
@@ -399,7 +399,7 @@ export function ArenaPage({
                   <div className="bg-[#062444]/60 border border-[#1f568d]/50 rounded-xl p-3 sm:p-3.5 space-y-2 animate-fadeIn">
                     <div className="flex items-center gap-2">
                       <FileText className="w-4 h-4 text-[#388ce0]" />
-                      <span className="font-title text-[#388ce0] uppercase tracking-wide text-xs sm:text-sm">3. Investigasi Dokumen (Teks)</span>
+                      <span className="font-title text-[#388ce0] tracking-wide text-xs sm:text-sm">3. Investigasi Dokumen (Teks)</span>
                     </div>
                     <ul className="text-[#c8d5e3] text-xs sm:text-sm space-y-1 list-disc list-inside">
                       <li>Baca cermat seluruh paragraf cerita atau artikel ilmiah.</li>
@@ -432,7 +432,7 @@ export function ArenaPage({
                   type="button"
                   onClick={() => setGuideSlide((s) => Math.max(0, s - 1))}
                   disabled={guideSlide === 0}
-                  className={`px-3 py-2 rounded-xl text-xs font-title tracking-wider uppercase flex items-center gap-1 transition-all ${
+                  className={`px-3 py-2 rounded-xl text-xs font-title tracking-wider flex items-center gap-1 transition-all ${
                     guideSlide === 0
                       ? 'opacity-30 cursor-not-allowed bg-[#062444] text-[#8fabc6]'
                       : 'bg-[#062444] hover:bg-[#0d3b6c] border border-[#1f568d] text-[#8fabc6] hover:text-white cursor-pointer active:scale-95'
@@ -447,7 +447,7 @@ export function ArenaPage({
                     id="btn-guide-next"
                     type="button"
                     onClick={() => setGuideSlide((s) => Math.min(2, s + 1))}
-                    className="flex-1 py-2 bg-gradient-to-r from-[#1f568d] via-[#256eb4] to-[#022949] hover:from-[#2877c2] hover:to-[#043660] border border-[#388ce0]/60 text-white rounded-xl text-xs font-title tracking-wider uppercase flex items-center justify-center gap-1 transition-all cursor-pointer shadow-none hover:scale-[1.02] active:scale-95"
+                    className="flex-1 py-2 bg-gradient-to-r from-[#1f568d] via-[#256eb4] to-[#022949] hover:from-[#2877c2] hover:to-[#043660] border border-[#388ce0]/60 text-white rounded-xl text-xs font-title tracking-wider flex items-center justify-center gap-1 transition-all cursor-pointer shadow-none hover:scale-[1.02] active:scale-95"
                   >
                     <span>Lanjut</span>
                     <ChevronRight className="w-4 h-4" />
@@ -457,7 +457,7 @@ export function ArenaPage({
                     id="btn-close-guide-back"
                     type="button"
                     onClick={() => setIsGuideOpen(false)}
-                    className="flex-1 py-2 bg-gradient-to-r from-[#f0c400] via-[#e5b800] to-[#b38f00] hover:from-[#ffd21a] hover:to-[#c49d00] text-black font-title tracking-wider uppercase rounded-xl text-xs font-bold flex items-center justify-center gap-1 transition-all cursor-pointer shadow-none hover:scale-[1.02] active:scale-95"
+                    className="flex-1 py-2 bg-gradient-to-r from-[#f0c400] via-[#e5b800] to-[#b38f00] hover:from-[#ffd21a] hover:to-[#c49d00] text-black font-title tracking-wider rounded-xl text-xs font-bold flex items-center justify-center gap-1 transition-all cursor-pointer shadow-none hover:scale-[1.02] active:scale-95"
                   >
                     <span>Mulai Investigasi</span>
                     <Check className="w-4 h-4 stroke-[3px]" />
@@ -488,10 +488,10 @@ export function ArenaPage({
                 <CheckCircle2 className="w-4 h-4 sm:w-6 sm:h-6 text-[#f0c400] animate-pulse" />
               </div>
 
-              <h3 className="text-sm sm:text-base font-normal text-[#f0c400] uppercase tracking-widest mb-0.5 sm:mb-1 shrink-0 font-title">
-                ANOMALI TERKUNCI!
+              <h3 className="text-sm sm:text-base font-normal text-[#f0c400] tracking-widest mb-0.5 sm:mb-1 shrink-0 font-title">
+                Anomali Terkunci!
               </h3>
-              <p className="text-[8px] sm:text-[9px] font-mono text-[#8fabc6] uppercase tracking-wider mb-2.5 sm:mb-4 shrink-0">
+              <p className="text-[8px] sm:text-[9px] font-mono text-[#8fabc6] tracking-wider mb-2.5 sm:mb-4 shrink-0">
                 Kasus {currentLevelIndex + 1}: {activeLevel.title}
               </p>
 

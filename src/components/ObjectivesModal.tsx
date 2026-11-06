@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Target, Fingerprint, ShieldCheck, ChevronLeft, ChevronRight, X, Sparkles } from 'lucide-react';
+import { Target, Fingerprint, ShieldCheck, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { playSynthesizerNote } from '../utils/audio';
 
 interface ObjectivesModalProps {
@@ -121,7 +121,7 @@ export function ObjectivesModal({ isOpen, onClose, onStart }: ObjectivesModalPro
             {slide.icon}
           </div>
           <div className="min-w-0 pr-6">
-            <h3 className="text-sm sm:text-base md:text-lg font-title text-[#f0c400] uppercase tracking-wider truncate">
+            <h3 className="text-sm sm:text-base md:text-lg font-title text-[#f0c400] tracking-wider truncate">
               {slide.title}
             </h3>
             <p className="text-[10px] sm:text-xs font-mono text-[#8fabc6] tracking-wide truncate">
@@ -138,7 +138,6 @@ export function ObjectivesModal({ isOpen, onClose, onStart }: ObjectivesModalPro
               className="rounded-2xl p-3 sm:p-4 border border-[#1f568d]/60 bg-[#062444]/60 shadow-none flex flex-col gap-1 text-left"
             >
               <div className="flex items-center gap-1.5 font-bold text-xs sm:text-sm text-[#388ce0] font-sans">
-                <Sparkles className="w-3.5 h-3.5 shrink-0 text-[#f0c400]" />
                 <span>{item.keyword}</span>
               </div>
               <p className="text-[11px] sm:text-xs text-[#c8d5e3] font-medium leading-relaxed text-justify font-sans">
@@ -155,7 +154,7 @@ export function ObjectivesModal({ isOpen, onClose, onStart }: ObjectivesModalPro
             type="button"
             disabled={isFirst}
             onClick={handlePrev}
-            className={`px-3 sm:px-4 py-2 rounded-xl text-xs font-title tracking-wider uppercase flex items-center gap-1 transition-all ${
+            className={`px-3 sm:px-4 py-2 rounded-xl text-xs font-title tracking-wider flex items-center gap-1 transition-all ${
               isFirst
                 ? 'opacity-30 cursor-not-allowed bg-[#062444] text-[#8fabc6]'
                 : 'bg-[#062444] hover:bg-[#0d3b6c] border border-[#1f568d] text-[#8fabc6] hover:text-white cursor-pointer active:scale-95'
@@ -189,7 +188,7 @@ export function ObjectivesModal({ isOpen, onClose, onStart }: ObjectivesModalPro
           <button
             type="button"
             onClick={handleNext}
-            className={`px-4 sm:px-5 py-2 rounded-xl text-xs font-title tracking-wider uppercase flex items-center gap-1 transition-all active:scale-95 cursor-pointer shadow-none ${
+            className={`px-4 sm:px-5 py-2 rounded-xl text-xs font-title tracking-wider flex items-center gap-1 transition-all active:scale-95 cursor-pointer shadow-none ${
               isLast
                 ? 'bg-gradient-to-r from-[#f0c400] via-[#e5b800] to-[#b38f00] hover:from-[#ffd21a] hover:to-[#c49d00] text-black font-bold'
                 : 'bg-gradient-to-r from-[#1f568d] via-[#256eb4] to-[#022949] hover:from-[#2877c2] hover:to-[#043660] border border-[#388ce0]/60 text-white'
